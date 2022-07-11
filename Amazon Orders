@@ -1,3 +1,8 @@
+#This is code I decided to try myself as a mini project/refresher. The guide I used came 
+#from an artcile from DataQuest titled "55 Fun (and Unique) Python Project Ideas for Beginners 
+#in 2022" -- youtube video in progress for visual walk through
+
+
 import pandas as pd
 
 df = pd.read_csv('C:/Users/jgord/Dropbox/My PC (DESKTOP-1HOUGPV)/Downloads/amazon_orders.csv')
