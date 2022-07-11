@@ -1,0 +1,11 @@
+import pandas as pd
+
+df = pd.read_csv('C:/Users/jgord/Dropbox/My PC (DESKTOP-1HOUGPV)/Downloads/amazon_orders.csv')
+df = df.fillna(0)
+
+df["Item Total"] = df["Item Total"].str.replace('$','').astype(float)
+#df.plot.bar(x='Order Date', y='Item Total', rot=90, figsize=(20,10))
+
+daily_orders = df.groupby('Order Date').sum()["Item Total"]
+#daily_orders.head()
+daily_orders.plot.bar(figsize=(20,10), color='#ffbac3f9')
